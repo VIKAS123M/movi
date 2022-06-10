@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-
-mongoose.connect(process.env.MONGODB_URI, {
+require('dotenv').config({path: '.env'})
+mongoose.createConnection(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useCreateIndex: true,
 });
